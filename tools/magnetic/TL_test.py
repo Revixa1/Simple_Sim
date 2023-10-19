@@ -9,16 +9,16 @@ import matplotlib.pyplot as plt
 
 def TranslationMatrix(thetax=0,thetay=0,thetaz=0,x=0,y=0,z=0):
 
-    Rotz = lambda theta: np.array([[np.cos(theta),-np.sin(theta),0],
-                                             [np.sin(theta),np.cos(theta),0],
+    Rotz = lambda theta: np.array(          [[np.cos(theta),-np.sin(theta),0],
+                                             [np.sin(theta),np.cos(theta), 0],
                                              [0,           0,             1]])
        
        
-    Roty = lambda theta: np.array([[np.cos(theta),0,-np.sin(theta)],
-                                             [0,          1,           0],
+    Roty = lambda theta: np.array(          [[np.cos(theta),0,-np.sin(theta)],
+                                             [0,            1,             0],
                                              [np.sin(theta),0,np.cos(theta)]])
        
-    Rotx= lambda theta: np.array([[1,          0,                0],
+    Rotx= lambda theta: np.array(       [[1,          0,               0],
                                          [0,np.cos(theta),-np.sin(theta)],
                                          [0,np.sin(theta),np.cos(theta)]])                         
    
@@ -55,47 +55,38 @@ def Transformation(aTb,v_b):
     return v_a
 
 
-
+#setting up the plot
 fig=plt.figure()
 ax = fig.add_subplot(111,projection="3d")
-
-
-plt.ion()
-
-
-for thetaz in np.arange(0,2*np.pi,0.01):
-
     
-    ax.set(xlim=(-1, 1), ylim=(-1, 1))
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
-    ax.set_zlabel("z")
-    worldTheli=TranslationMatrix(thetaz,thetaz,thetaz,np.cos(thetaz),0,np.sin(thetaz))
+ax.set(xlim=(-1, 1), ylim=(-1, 1))
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("z")
 
 
-    v_Helidipole_heli=np.array([1,0,0]).reshape(3,1)
-    ic(v_Helidipole_heli )
-    v_Helidipole_world= Transformation(worldTheli,v_Helidipole_heli )
-    ic(v_Helidipole_world)
-    
-    v_Helisensor_heli=np.array([0,0,0]).reshape(3,1)
-    v_Helisensor_world=Transformation(worldTheli,v_Helisensor_heli )
-    
-    Points=np.concatenate((v_Helisensor_world,v_Helidipole_world),axis=1)
-    ic(Points)
-    ic(Points[0,:])
-    # Plot
-    
-    #ax.scatter(Points[0,:], Points[1,:], Points[2,:])
-    
-    ax.plot(Points[0,:], Points[1,:], zs=Points[2,:])
-    plt.show()
-    
-    plt.pause(0.01)
-    #plt.cla()
-    
+#setting geometry
+worldTheli=TranslationMatrix(0,0,0,0,0,1) # Heli to world translation matrix
 
-plt.ioff()
+v_Helidipole_heli=np.array([1,0,0]).reshape(3,1) # dipole position in heli coordinate
+ic(v_Helidipole_heli )
+v_Helidipole_world= Transformation(worldTheli,v_Helidipole_heli ) # dipole position in world coordinate
+ic(v_Helidipole_world)
+
+v_Helisensor_heli=np.array([0,0,0]).reshape(3,1) # sensor position in heli coordinate
+v_Helisensor_world=Transformation(worldTheli,v_Helisensor_heli )  # sensor position in world coordinate
+
+
+
+
+
+Points=np.concatenate((v_Helisensor_world,v_Helidipole_world),axis=1) # list of important points in world coordinate
+ic(Points)
+ic(Points[0,:])
+
+#make the plot and plot it
+ax.plot(Points[0,:], Points[1,:], zs=Points[2,:],linestyle="-",color='k',marker='o')
+
 plt.show()
 
 
