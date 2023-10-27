@@ -14,22 +14,26 @@ import magsignature as magsig
 def main():
 
     #area of calculation
-    lowdist,highdist,ddist=-3,3.1,0.1
-    datapoints=int((highdist-lowdist)/ddist)+1
+    #lowdist,highdist,ddist=-3,3.1,0.1
+    #datapoints=int((highdist-lowdist)/ddist)+1
+    #
+    #lowheight,highheight,dheight=-1,2,1
+    #heightpoints=int((highheight-lowheight)/dheight)
     
-    lowheight,highheight,dheight=-1,2,1
-    heightpoints=int((highheight-lowheight)/dheight)
-
     #setting to let the plots plot
     pausetime=0.001
+
     
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-750,750,-750,750,249,250,11,1)
     
+    #ic(ydatapoints)
 
     #setting up the interactive vector plot
     fig2=plt.figure()
-    bx= fig2.add_subplot(3,1,1)
-    by=fig2.add_subplot(3,1,2)
-    bz=fig2.add_subplot(3,1,3)
+    bx= fig2.add_subplot(4,1,1)
+    by=fig2.add_subplot(4,1,2)
+    bz=fig2.add_subplot(4,1,3)
+    bs=fig2.add_subplot(4,1,4)
     fig2.suptitle("Simulated Vector Mesurments")
     
     
@@ -37,31 +41,31 @@ def main():
     
     
     # needed for 3d scalar map
-    X = np.arange(lowdist,highdist,ddist)
-    Y = np.arange(lowdist,highdist,ddist)
-    X, Y = np.meshgrid(X, Y)
+    #X = np.arange(lowdist,highdist,ddist)
+    #Y = np.arange(lowdist,highdist,ddist)
+    #X, Y = np.meshgrid(X, Y)
 
     # init of the memory of the maps to plot all off them at the same time
-    X_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    Y_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    Z_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    height_record=np.empty((heightpoints),dtype=float)
+    #X_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
+    #Y_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
+    #Z_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
+    #height_record=np.empty((heightpoints),dtype=float)
 
 
     # test dipoles setup
-    testSignature=magsig.MagSignature()
-    testSignature.newDipole(dipole.Dipole(0,0,0.001,2,0,0))
-    testSignature.newDipole(dipole.Dipole(0,0,0.001,0,2,0))
-    testSignature.newDipole(dipole.Dipole(0,0,0.001,-2,0,0))
-    testSignature.newDipole(dipole.Dipole(0,0,0.001,0,-2,0))
-    testSignature.newDipole(dipole.Dipole(0,0,0.001,0,0,0))
-    testSignature.newDipole(dipole.Dipole(0.005,0,0,0,0,0))
+    testSignature=magsig.MagSignature([0,0,0])#init magsig with sensor position
+    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,2,0,0))
+    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,0,2,0))
+    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,-2,0,0))
+    #testSignature.newDipole(dipole.Dipole(0,2.5e7*1e-9,0,-500,-500,0))
+    testSignature.newDipole(dipole.Dipole(0,-2.5e7*1e-9,0,0,0,0))
+   
 
     #height iterator to move in the arrays of the map recordings
     iz=0
 
     #for loop for height
-    for rz in np.arange(lowheight,highheight,dheight):
+    for rz in np.arange(zmin,zmax+zdelta,zdelta):
         
         plt.ion()#make plots interactive for the vector ploting
         #reseting variables and arrays
@@ -71,21 +75,29 @@ def main():
         BX=np.empty((0,0),dtype=float)
         BY=np.empty((0,0),dtype=float)
         BZ=np.empty((0,0),dtype=float)
-        DZ=np.empty((0,0),dtype=float)
+        BS=np.empty((0,0),dtype=float)
+        DZ=np.empty((ydatapoints,xdatapoints),dtype=float)
+
+        bx.clear()
+        by.clear()
+        bz.clear()
 
         #for loop for x position on the map
-        for rx in np.arange(lowdist,highdist,ddist):
+        ix=0
+        for rx in np.arange(xmin,xmax+delta,delta):
             loop_DZ=np.empty((0),dtype=float)#reset arrays of z value on scalar map
                 
             #for loop for y position on the map    
-            for ry in np.arange(lowdist,highdist,ddist):
+            for ry in np.arange(ymin,ymax+delta,delta):
 
                 '''
                 Change translation matrix to the right translation values 
                 Set the distance of the sensor to all dipoles
                 Calculate the field at the sensor for this coordinate
                 '''
-                testSignature.set_TranslationMatrix(rx,ry,rz)
+                #testSignature.set_SensorPosition([rx,ry,rz])#move the sensor in a coords
+                testSignature.set_TranslationMatrix(rx,ry,rz)#set the distance and angle between a and b coords
+                #testSignature.dipolelist[0].set_Dipole_pos([-500+iz*500,-500+iz*500,0])
                 testSignature.set_Sensor_Vector()
                 testSignature.resB()
                 
@@ -96,24 +108,31 @@ def main():
                 BX=np.append(BX,testSignature.resultantB[0])
                 BY=np.append(BY,testSignature.resultantB[1])
                 BZ=np.append(BZ,testSignature.resultantB[2])
-    
+                BS=np.append(BZ,testSignature.res_sB)
+
+                #ic(testSignature.TFperm)
                 loop_DZ=np.append(loop_DZ,testSignature.res_sB)
 
             #reset the labels for the vector graphs
             bx.set(ylabel="Bx(T)")
             by.set(ylabel="By(T)")
-            bz.set(ylabel="Bz(T)",xlabel="posY(m)")
+            bz.set(ylabel="Bz(T)")
+            bs.set(ylabel="Bs(T)",xlabel="posY(m)")
 
             #plot the vector graphs interactively
             bx.plot(DY,BX)
             by.plot(DY,BY)
             bz.plot(DY,BZ)
+            bs.plot(DY,BZ)
             plt.pause(pausetime)
             bx.clear()
             by.clear()
             bz.clear()
+            bs.clear()
 
-
+            
+            
+           
             
 
             #reset the vector graphs data
@@ -123,20 +142,23 @@ def main():
             DY=np.empty((0,0),dtype=float)
     
             #append the map data for one line in x coords to the set of the map
-            DZ=np.append(DZ,loop_DZ)
-    
+            DZ[:,ix]=loop_DZ
+            #ic(DZ)
+            ix+=1
     
         # shape data for plot usage and record it
-        DZ=DZ.reshape(datapoints,datapoints) 
+        #DZ=DZ.reshape(ydatapoints,xdatapoints) 
         
         X_record[iz,:]= X
         Y_record[iz,:]= Y
         Z_record[iz,:]= DZ
         height_record[iz]=rz
         iz+=1
+        #ic(iz)
     
     #plot every maps at the end
-    for j in range(0,heightpoints):
+    #ic(height_record)
+    for j in range(0,zdatapoints):
         fig1=plt.figure()
         magplt.scalarMap(fig1,X_record[j,:],Y_record[j,:],Z_record[j,:],height_record[j])
         plt.show(block=False)

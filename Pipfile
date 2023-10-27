@@ -8,6 +8,7 @@ numpy = "*"
 icecream = "*"
 scipy = "*"
 matplotlib = "*"
+ppigrf = "*"
 
 [dev-packages]
 
