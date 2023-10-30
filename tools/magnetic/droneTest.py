@@ -1,13 +1,17 @@
-import dipole
 import numpy as np
 from icecream import ic
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.ticker import EngFormatter
 
+
+import drone
+import dipole
 import magplotting as magplt
-import time
-import magsignature as magsig
+
+
+
+
 
 
 
@@ -24,7 +28,7 @@ def main():
     pausetime=0.001
 
     
-    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,-1,1,0.1,2)
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-100,100,-100,100,10,20,2.1,10)
     
     #ic(ydatapoints)
 
@@ -40,26 +44,20 @@ def main():
     
     
     
-    # needed for 3d scalar map
-    #X = np.arange(lowdist,highdist,ddist)
-    #Y = np.arange(lowdist,highdist,ddist)
-    #X, Y = np.meshgrid(X, Y)
 
-    # init of the memory of the maps to plot all off them at the same time
-    #X_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    #Y_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    #Z_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    #height_record=np.empty((heightpoints),dtype=float)
+ 
 
 
-    # test dipoles setup
-    testSignature=magsig.MagSignature([0,0,0])#init magsig with sensor position
+    # Drone setup
+
+    
+    Drone1=drone.Drone([-1,0,0])#init drone with sensor position in drone coords
     #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,2,0,0))
     #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,0,2,0))
     #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,-2,0,0))
     #testSignature.newDipole(dipole.Dipole(0,2.5e7*1e-9,0,-500,-500,0))
-    testSignature.newDipole(dipole.Dipole(1e-9,0,0,0,0,0))
-   
+    Drone1.newDipole(dipole.Dipole(1e-9,0,0,1,0,0))
+    Drone1.newMapDipole(dipole.Dipole(0,0,1e-3,40,20,0))
 
     #height iterator to move in the arrays of the map recordings
     iz=0
@@ -95,23 +93,21 @@ def main():
                 Set the distance of the sensor to all dipoles
                 Calculate the field at the sensor for this coordinate
                 '''
-                #testSignature.set_SensorPosition([rx,ry,rz])#move the sensor in a coords
-                testSignature.set_TranslationMatrix(rx,ry,rz)#set the distance and angle between a and b coords
-                #testSignature.dipolelist[0].set_Dipole_pos([-500+iz*500,-500+iz*500,0])
-                testSignature.set_Sensor_Vector()
-                testSignature.resB()
+                
+                Drone1.update(rx,ry,rz)
+               
                 
     
                 #append the arrays with data
                 DX=np.append(DX,rx)
                 DY=np.append(DY,ry)
-                BX=np.append(BX,testSignature.resultantB[0])
-                BY=np.append(BY,testSignature.resultantB[1])
-                BZ=np.append(BZ,testSignature.resultantB[2])
-                BS=np.append(BS,testSignature.dipolelist[0].get_sB())
+                BX=np.append(BX,Drone1.TF)
+                BY=np.append(BY,Drone1.TF)
+                BZ=np.append(BZ,Drone1.TF)
+                BS=np.append(BS,Drone1.TF)
 
                 #ic(testSignature.TFperm)
-                loop_DZ=np.append(loop_DZ,testSignature.TFperm)
+                loop_DZ=np.append(loop_DZ,Drone1.TF)
 
             #reset the labels for the vector graphs
             bx.set(ylabel="Bx(T)")

@@ -9,6 +9,7 @@ icecream = "*"
 scipy = "*"
 matplotlib = "*"
 ppigrf = "*"
+plotly = "*"
 
 [dev-packages]
 
