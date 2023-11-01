@@ -13,18 +13,12 @@ import magsignature as magsig
 
 def main():
 
-    #area of calculation
-    #lowdist,highdist,ddist=-3,3.1,0.1
-    #datapoints=int((highdist-lowdist)/ddist)+1
-    #
-    #lowheight,highheight,dheight=-1,2,1
-    #heightpoints=int((highheight-lowheight)/dheight)
     
-    #setting to let the plots plot
+    #setting to let the interactive and non blocking plots plot
     pausetime=0.001
 
-    
-    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,-1,1,0.1,2)
+    #setting up all variables and lists related to creating the data and recording it
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_vars(-3,3,-3,3,-1,1,0.1,2)
     
     #ic(ydatapoints)
 
@@ -36,20 +30,6 @@ def main():
     bs=fig2.add_subplot(4,1,4)
     fig2.suptitle("Simulated Vector Mesurments")
     
-    
-    
-    
-    
-    # needed for 3d scalar map
-    #X = np.arange(lowdist,highdist,ddist)
-    #Y = np.arange(lowdist,highdist,ddist)
-    #X, Y = np.meshgrid(X, Y)
-
-    # init of the memory of the maps to plot all off them at the same time
-    #X_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    #Y_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    #Z_record= np.empty((heightpoints,datapoints,datapoints),dtype=float)
-    #height_record=np.empty((heightpoints),dtype=float)
 
 
     # test dipoles setup
@@ -95,9 +75,9 @@ def main():
                 Set the distance of the sensor to all dipoles
                 Calculate the field at the sensor for this coordinate
                 '''
-                #testSignature.set_SensorPosition([rx,ry,rz])#move the sensor in a coords
+                #testSignature.set_SensorPosition([rx,ry,rz])#move the sensor in a coords (if you want to)
                 testSignature.set_TranslationMatrix(rx,ry,rz)#set the distance and angle between a and b coords
-                #testSignature.dipolelist[0].set_Dipole_pos([-500+iz*500,-500+iz*500,0])
+                #testSignature.dipolelist[0].set_Dipole_pos([-500+iz*500,-500+iz*500,0]) # move a dipole in it's referenc coords (if you want)
                 testSignature.set_Sensor_Vector()
                 testSignature.resB()
                 

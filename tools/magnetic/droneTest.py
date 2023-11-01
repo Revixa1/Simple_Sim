@@ -1,3 +1,8 @@
+'''
+    Testing program for the drone class
+
+'''
+
 import numpy as np
 from icecream import ic
 import matplotlib.pyplot as plt
@@ -17,13 +22,6 @@ import magplotting as magplt
 
 def main():
 
-    #area of calculation
-    #lowdist,highdist,ddist=-3,3.1,0.1
-    #datapoints=int((highdist-lowdist)/ddist)+1
-    #
-    #lowheight,highheight,dheight=-1,2,1
-    #heightpoints=int((highheight-lowheight)/dheight)
-    
     #setting to let the plots plot
     pausetime=0.001
 
@@ -49,15 +47,9 @@ def main():
 
 
     # Drone setup
-
-    
     Drone1=drone.Drone([-1,0,0])#init drone with sensor position in drone coords
-    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,2,0,0))
-    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,0,2,0))
-    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,-2,0,0))
-    #testSignature.newDipole(dipole.Dipole(0,2.5e7*1e-9,0,-500,-500,0))
     Drone1.newDipole(dipole.Dipole(1e-9,0,0,1,0,0))
-    Drone1.newMapDipole(dipole.Dipole(0,0,1e-3,40,20,0))
+    Drone1.newMapDipole(dipole.Dipole(0,1e-3,0,40,20,0))
 
     #height iterator to move in the arrays of the map recordings
     iz=0
@@ -143,9 +135,7 @@ def main():
             #ic(DZ)
             ix+=1
     
-        # shape data for plot usage and record it
-        #DZ=DZ.reshape(ydatapoints,xdatapoints) 
-        
+        # shape data for plot usage and record it        
         X_record[iz,:]= X
         Y_record[iz,:]= Y
         Z_record[iz,:]= DZ

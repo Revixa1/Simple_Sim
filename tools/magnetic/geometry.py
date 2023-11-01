@@ -1,23 +1,24 @@
 import numpy as np
 from icecream import ic
 
+#function to make a translation/transformation matrix
 def TranslationMatrix(thetax=0,thetay=0,thetaz=0,x=0,y=0,z=0):
-
+    #rotational matrix in z
     Rotz = lambda theta: np.array(          [[np.cos(theta),-np.sin(theta),0],
                                              [np.sin(theta),np.cos(theta), 0],
                                              [0,           0,             1]])
        
-       
+    #rotational matrix in y 
     Roty = lambda theta: np.array(          [[np.cos(theta),0,-np.sin(theta)],
                                              [0,            1,             0],
                                              [np.sin(theta),0,np.cos(theta)]])
-       
+    #rotational matrix in x 
     Rotx= lambda theta: np.array(       [[1,          0,               0],
                                          [0,np.cos(theta),-np.sin(theta)],
                                          [0,np.sin(theta),np.cos(theta)]])                         
    
     
-    aRb=(Rotz(thetaz).dot(Roty(thetay))).dot(Rotx(thetax))
+    aRb=(Rotz(thetaz).dot(Roty(thetay))).dot(Rotx(thetax))# assemble the rotational matrixes to get a xyz rotational matrix
     #ic(aRb)
     
     
@@ -38,6 +39,7 @@ def TranslationMatrix(thetax=0,thetay=0,thetaz=0,x=0,y=0,z=0):
 
     return aTb
 
+#function to do a transformation on a vector from a different reference
 def Transformation(aTb,v_b):
     
     v_b= v_b.reshape(3,1)
