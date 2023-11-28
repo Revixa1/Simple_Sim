@@ -10,10 +10,12 @@
 import numpy as np
 from icecream import ic
 import ppigrf
+import matplotlib.pyplot as plt
+from datetime import datetime
 
 import dipole
 import geometry as geo
-from datetime import datetime
+
 
 
 
@@ -23,6 +25,7 @@ class MagSignature:
     #init the magnetic signature
     def __init__(self,sensorpos):
         self.dipolelist = [] #initialise the list of dipoles for this magnetic signature
+        self.wirelist   = []
         self.set_SensorPosition(sensorpos) #set the sensors position in this frame
         self.set_TranslationMatrix() #initialise the transformation matrix
         self.setBe() #initialise the eath's magnetic field
@@ -35,10 +38,16 @@ class MagSignature:
     def newDipole(self,dipole):
         self.dipolelist.append(dipole)
 
+    def newWire(self,wire):
+        wire.setSensorPos(geo.Transformation(self.aTb,self.sensorpos))
+        self.wirelist.append(wire)
+    
     #set the sensor vector to all dipoles
     def set_Sensor_Vector(self):
         for i in self.dipolelist:
             i.set_sensorVector(geo.Transformation(self.aTb,self.sensorpos-i.get_Dipole_pos()))
+
+        
 
     
     #set the translation matrix 
@@ -47,31 +56,42 @@ class MagSignature:
         #ic(self.aTb)
 
     #get the scalar output from the sensor and the totalfield.
-    def resB(self):
+    def resB(self,amp=30):
         phresB=0
         self.c1,self.c2,self.c3=0,0,0
         self.c4,self.c5,self.c6,self.c7,self.c8,self.c9=0,0,0,0,0,0
-        for i in self.dipolelist:
-            #ic(i.get_vB())
-            phresB=phresB+i.get_vB()
-            i.get_C()
-            self.c1=self.c1+i.C1
-            self.c2=self.c2+i.C2
-            self.c3=self.c3+i.C3
-            self.c4=self.c4+i.C4
-            self.c5=self.c5+i.C5
-            self.c6=self.c6+i.C6
-            self.c7=self.c7+i.C7
-            self.c8=self.c8+i.C8
-            self.c9=self.c9+i.C9
+        self.TFperm=np.array([0]).reshape(1,1)
+        self.TFind=np.array([0]).reshape(1,1)
+        self.TFwire=np.array([0]).reshape(1,1)
+        self.TF=np.array([0]).reshape(1,1)
+        self.resultantB=np.array([0,0,0]).reshape(3,1)
+
+        if(len(self.dipolelist)>0):
+            for i in self.dipolelist:
+                #ic(i.get_vB())
+                phresB=phresB+i.get_vB()
+                i.get_C()
+                self.c1=self.c1+i.C1
+                self.c2=self.c2+i.C2
+                self.c3=self.c3+i.C3
+                self.c4=self.c4+i.C4
+                self.c5=self.c5+i.C5
+                self.c6=self.c6+i.C6
+                self.c7=self.c7+i.C7
+                self.c8=self.c8+i.C8
+                self.c9=self.c9+i.C9
+
+                    #ic(phresB)
+            self.resultantB=phresB+self.Be
+            self.res_sB=np.sqrt(self.resultantB.reshape(1,3).dot(self.resultantB))
+            self.TFperm=self.c1*self.Be[0]/self.sBe+self.c2*self.Be[1]/self.sBe+self.c3*self.Be[2]/self.sBe
+            self.TFind=self.c4*self.Be[0]**2/self.sBe+self.c5*self.Be[0]*self.Be[1]/self.sBe+self.c6*self.Be[0]*self.Be[1]/self.sBe+self.c7*self.Be[1]**2/self.sBe+self.c8*self.Be[1]*self.Be[2]/self.sBe+self.c9*self.Be[2]**2/self.sBe
+
+        if(len(self.wirelist)>0):    
+            self.updateWire(amp)
+            self.TFwire=np.linalg.norm( self.Bw.reshape(1,3).dot(self.Be)/self.sBe).reshape(1,1)#.reshape(1,3).dot(self.Be)/self.sBe
             
-            
-        #ic(phresB)
-        self.resultantB=phresB+self.Be
-        self.res_sB=np.sqrt(self.resultantB.reshape(1,3).dot(self.resultantB))
-        self.TFperm=self.c1*self.Be[0]/self.sBe+self.c2*self.Be[1]/self.sBe+self.c3*self.Be[2]/self.sBe
-        self.TFind=self.c4*self.Be[0]**2/self.sBe+self.c5*self.Be[0]*self.Be[1]/self.sBe+self.c6*self.Be[0]*self.Be[1]/self.sBe+self.c7*self.Be[1]**2/self.sBe+self.c8*self.Be[1]*self.Be[2]/self.sBe+self.c9*self.Be[2]**2/self.sBe
-        self.TF=self.TFperm[0,0]+self.TFind[0,0]# sum all parts of the TotalField (TFpermanent,TFinduced,TFelectric,TFeddycurrents,(TFgeomagnetic,TFoceanswell,TFionosphere,TFgeology))
+        self.TF=self.TFperm[0,0]+self.TFind[0,0]+self.TFwire[0,0]# sum all parts of the TotalField (TFpermanent,TFinduced,TFelectric,TFeddycurrents,(TFgeomagnetic,TFoceanswell,TFionosphere,TFgeology))
         #ic(self.TF)
         #ic(self.resultantB.reshape(1,3).dot(self.Be)/self.sBe)
         #ic(self.TF/(self.resultantB.reshape(1,3).dot(self.Be)/self.sBe))
@@ -81,6 +101,7 @@ class MagSignature:
     def set_SensorPosition(self,sensorpos):
         
         self.sensorpos=np.array(sensorpos).reshape(3,1)
+        
 
     #set the magnetic field of the earth for the equations
     def setBe(self,lon=-75.552067,lat=45.406838,h= 0.0,date = datetime(2023, 10, 20)):
@@ -91,5 +112,18 @@ class MagSignature:
         
         self.sBe= np.sqrt(self.Be.reshape(1,3).dot(self.Be))
 
-   
+    def updateWire(self,amp):
+        self.Bw=np.array([0,0,0]).reshape(3,1)
+        
+        fieldFromWires=0
+        for i in self.wirelist:
+            i.setAmp(amp)
+            i.setSensorPos(self.sensorpos)
+            fieldFromWires=fieldFromWires+i.getField()
+        self.Bw=fieldFromWires
+            
+  
+        
+        
+
         

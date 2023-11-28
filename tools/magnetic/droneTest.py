@@ -8,12 +8,13 @@ from icecream import ic
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.ticker import EngFormatter
+import argparse
 
 
 import drone
 import dipole
 import magplotting as magplt
-
+import wire
 
 
 
@@ -22,11 +23,14 @@ import magplotting as magplt
 
 def main():
 
+    parser=argparse.ArgumentParser(description='Program to map the DC fields of a drone',prog='DroneMagMaper')
+    parser.add_argument('-csv','--csvfilename',metavar='F',type=str,help='the file name off the scalar reading on the drone components')
+    args=parser.parse_args()
     #setting to let the plots plot
     pausetime=0.001
 
     
-    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-100,100,-100,100,10,20,2.1,10)
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,0.2,0.2,0.1,0.2)
     
     #ic(ydatapoints)
 
@@ -40,7 +44,8 @@ def main():
     
     
     
-    
+
+        
     
 
  
@@ -48,8 +53,48 @@ def main():
 
     # Drone setup
     Drone1=drone.Drone([-1,0,0])#init drone with sensor position in drone coords
-    Drone1.newDipole(dipole.Dipole(1e-9,0,0,1,0,0))
-    Drone1.newMapDipole(dipole.Dipole(0,1e-3,0,40,20,0))
+    
+    wiregeom1=np.array([[0.07,    0.03,  -0.08],
+                         [0.09,    0.08,  -0.08],
+                         [0.11,    0.05,  -0.05],
+                         [0.14,   0.08,  0],
+                         [0.06,   0.08,  0.1],
+                         [0.08,    0.02,  0],
+                         [0.08,   0,  0],
+                         [0.08,    -0.02,  0],
+                         [0.06,   -0.08,  0.10],
+                         [0.14,   -0.08,  0],
+                         [0.11,    -0.05,  -0.05],
+                         [0.09,    -0.08,  -0.08],
+                         [0.07,    -0.03,  -0.08],
+                         [0.14,    -0.06,  -0.03],
+                         [0.1,    -0.08,   0.08],
+                         [0.06,    -0.01,   0],
+                         [-0.03,    -0.02,   -0.1],
+                         [-0.03,    0.02,   -0.1],
+                         [0.06,    0.01,   0],
+                         [0.1,    0.08,   0.08],
+                         [0.14,    0.06,  -0.03],
+                         [0.07,    0.03,  -0.08]])                       
+
+                    
+    Drone1.newWire(wire.Wire(wiregeom1))
+    Drone1.magsigDrone.wirelist[0].setGeom(wiregeom1,100)
+
+
+
+    #======csv scalar mesurements projection============
+    Drone1.loadDronefromcsv(args.csvfilename)
+    #print(csvdata)
+    #print(csvdata[3:,4])
+    
+    
+    #=================================================
+
+
+    
+    Drone1.showDrone()
+    #Drone1.newWire(wire.Wire(wiregeom2))
 
     #height iterator to move in the arrays of the map recordings
     iz=0
@@ -72,6 +117,8 @@ def main():
         by.clear()
         bz.clear()
 
+
+
         #for loop for x position on the map
         ix=0
         for rx in np.arange(xmin,xmax+delta,delta):
@@ -86,10 +133,11 @@ def main():
                 Calculate the field at the sensor for this coordinate
                 '''
                 
-                Drone1.update(rx,ry,rz)
-               
+                Drone1.updateDroneMap(rx,ry,rz,30)
                 
-    
+                
+                
+                Drone1.TF=Drone1.TF
                 #append the arrays with data
                 DX=np.append(DX,rx)
                 DY=np.append(DY,ry)
@@ -100,7 +148,7 @@ def main():
 
                 #ic(testSignature.TFperm)
                 loop_DZ=np.append(loop_DZ,Drone1.TF)
-
+            '''
             #reset the labels for the vector graphs
             bx.set(ylabel="Bx(T)")
             by.set(ylabel="By(T)")
@@ -117,7 +165,7 @@ def main():
             by.clear()
             bz.clear()
             bs.clear()
-
+            '''
             
             
            
