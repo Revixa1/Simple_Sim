@@ -76,7 +76,9 @@ def main():
     #adding a wire to the drone                
     Drone1.newWire(wire.Wire(wiregeom1,resolution=100,loopTurns=1))
 
-    Drone1.newDipole(dipole.Dipole(1e-6,0,0,1,0,0))
+    #Drone1.newDipole(dipole.Dipole(1e-6,0,0,1,0,0))
+
+    #Drone1.newDipole(dipole.Dipole(1e-6,0,0,1,0,0))
    
 
 
