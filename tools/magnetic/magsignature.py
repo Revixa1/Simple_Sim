@@ -84,16 +84,19 @@ class MagSignature:
                 self.c8=self.c8+i.C8
                 self.c9=self.c9+i.C9
 
-                    #ic(phresB)
-            self.resultantB=phresB+self.Be
+            #ic(phresB+self.Be.reshape(3,1))
+            self.resultantB=phresB+self.Be.reshape(3,1)
             self.res_sB=np.sqrt(self.resultantB.reshape(1,3).dot(self.resultantB))
             self.TFperm=self.c1*self.Be[0]/self.sBe+self.c2*self.Be[1]/self.sBe+self.c3*self.Be[2]/self.sBe
             self.TFind=self.c4*self.Be[0]**2/self.sBe+self.c5*self.Be[0]*self.Be[1]/self.sBe+self.c6*self.Be[0]*self.Be[1]/self.sBe+self.c7*self.Be[1]**2/self.sBe+self.c8*self.Be[1]*self.Be[2]/self.sBe+self.c9*self.Be[2]**2/self.sBe
-
+            self.TFind=self.TFind.reshape(1,1)
         if(len(self.wirelist)>0):# only calculate wires if there are some
             self.updateWire(amp)
             self.TFwire=np.linalg.norm( self.Bw.reshape(1,3).dot(self.Be)/self.sBe).reshape(1,1)#.reshape(1,3).dot(self.Be)/self.sBe
-            
+
+        #ic(self.TFwire)
+        #ic(self.TFperm)
+        #ic(self.TFind)
         self.TF=self.TFperm[0,0]+self.TFind[0,0]+self.TFwire[0,0]# sum all parts of the TotalField (TFpermanent,TFinduced,TFelectric,TFeddycurrents,(TFgeomagnetic,TFoceanswell,TFionosphere,TFgeology))
         #ic(self.TF)
         #ic(self.resultantB.reshape(1,3).dot(self.Be)/self.sBe)

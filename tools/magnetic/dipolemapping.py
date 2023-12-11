@@ -18,7 +18,7 @@ def main():
     pausetime=0.001
 
     #setting up all variables and lists related to creating the data and recording it
-    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_vars(-3,3,-3,3,-1,1,0.1,2)
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,-1,1,0.1,2)
     
     #ic(ydatapoints)
 
@@ -34,10 +34,10 @@ def main():
 
     # test dipoles setup
     testSignature=magsig.MagSignature([0,0,0])#init magsig with sensor position
-    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,2,0,0))
-    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,0,2,0))
-    #testSignature.newDipole(dipole.Dipole(0,0,1*1e0,-2,0,0))
-    #testSignature.newDipole(dipole.Dipole(0,2.5e7*1e-9,0,-500,-500,0))
+    testSignature.newDipole(dipole.Dipole(0,0,1*1e0,2,0,0))
+    testSignature.newDipole(dipole.Dipole(0,0,1*1e0,0,2,0))
+    testSignature.newDipole(dipole.Dipole(0,0,1*1e0,-2,0,0))
+    testSignature.newDipole(dipole.Dipole(0,2.5e7*1e-9,0,-500,-500,0))
     testSignature.newDipole(dipole.Dipole(1e-9,0,0,0,0,0))
    
 

@@ -31,7 +31,7 @@ def main():
     pausetime=0.001
 
     #initialising every variables needed to make a scalar map.
-    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,0.15,0.15,0.1,10)
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,-0.15,0.15,0.1,0.15)
     
     
 
@@ -75,6 +75,8 @@ def main():
 
     #adding a wire to the drone                
     Drone1.newWire(wire.Wire(wiregeom1,resolution=100,loopTurns=1))
+
+    Drone1.newDipole(dipole.Dipole(1e-6,0,0,1,0,0))
    
 
 
