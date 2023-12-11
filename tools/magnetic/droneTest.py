@@ -20,27 +20,22 @@ import wire
 
 
 
-
 def main():
 
+    #Setting the programms info shown from the terminal about it's usage with "--help" option
     parser=argparse.ArgumentParser(description='Program to map the DC fields of a drone',prog='DroneMagMaper')
     parser.add_argument('-csv','--csvfilename',metavar='F',type=str,help='the file name off the scalar reading on the drone components')
     args=parser.parse_args()
-    #setting to let the plots plot
+    
+    #setting to pause the programm in seconds to let the plots do there work
     pausetime=0.001
 
+    #initialising every variables needed to make a scalar map.
+    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,0.15,0.15,0.1,10)
     
-    X,Y,X_record,Y_record,Z_record,xdatapoints,ydatapoints,zdatapoints,xmin,xmax,ymin,ymax,zmin,zmax,delta,zdelta,height_record=magplt.setup_mesh(-3,3,-3,3,0.2,0.2,0.1,0.2)
     
-    #ic(ydatapoints)
 
-    #setting up the interactive vector plot
-    fig2=plt.figure()
-    bx= fig2.add_subplot(4,1,1)
-    by=fig2.add_subplot(4,1,2)
-    bz=fig2.add_subplot(4,1,3)
-    bs=fig2.add_subplot(4,1,4)
-    fig2.suptitle("Simulated Vector Mesurments")
+ 
     
     
     
@@ -52,8 +47,9 @@ def main():
 
 
     # Drone setup
-    Drone1=drone.Drone([-1,0,0])#init drone with sensor position in drone coords
-    
+    Drone1=drone.Drone([-0.75,0,0])#init drone with sensor position in drone coords
+
+    #creating the geometry of a current carring wire
     wiregeom1=np.array([[0.07,    0.03,  -0.08],
                          [0.09,    0.08,  -0.08],
                          [0.11,    0.05,  -0.05],
@@ -77,24 +73,25 @@ def main():
                          [0.14,    0.06,  -0.03],
                          [0.07,    0.03,  -0.08]])                       
 
-                    
-    Drone1.newWire(wire.Wire(wiregeom1))
-    Drone1.magsigDrone.wirelist[0].setGeom(wiregeom1,100)
+    #adding a wire to the drone                
+    Drone1.newWire(wire.Wire(wiregeom1,resolution=100,loopTurns=1))
+   
 
 
 
     #======csv scalar mesurements projection============
-    Drone1.loadDronefromcsv(args.csvfilename)
-    #print(csvdata)
-    #print(csvdata[3:,4])
+    if(args.csvfilename):#only load the csv if a file name has been given
+        Drone1.loadDronefromcsv(args.csvfilename)
+        #print(csvdata)
+        #print(csvdata[3:,4])
     
     
     #=================================================
 
 
     
-    Drone1.showDrone()
-    #Drone1.newWire(wire.Wire(wiregeom2))
+    Drone1.showDrone()#show the drones DC magnetic sources and the wire shape
+  
 
     #height iterator to move in the arrays of the map recordings
     iz=0
@@ -105,17 +102,10 @@ def main():
         plt.ion()#make plots interactive for the vector ploting
         #reseting variables and arrays
         i=0
-        DX=np.empty((0,0),dtype=float)
-        DY=np.empty((0,0),dtype=float)
-        BX=np.empty((0,0),dtype=float)
-        BY=np.empty((0,0),dtype=float)
-        BZ=np.empty((0,0),dtype=float)
-        BS=np.empty((0,0),dtype=float)
+
+
         DZ=np.empty((ydatapoints,xdatapoints),dtype=float)
 
-        bx.clear()
-        by.clear()
-        bz.clear()
 
 
 
@@ -123,6 +113,7 @@ def main():
         ix=0
         for rx in np.arange(xmin,xmax+delta,delta):
             loop_DZ=np.empty((0),dtype=float)#reset arrays of z value on scalar map
+            
                 
             #for loop for y position on the map    
             for ry in np.arange(ymin,ymax+delta,delta):
@@ -133,50 +124,13 @@ def main():
                 Calculate the field at the sensor for this coordinate
                 '''
                 
-                Drone1.updateDroneMap(rx,ry,rz,30)
+                Drone1.updateDroneMap(rx,ry,rz)#change the position of the sensor in the drone coords and recalculate the field
                 
-                
-                
-                Drone1.TF=Drone1.TF
-                #append the arrays with data
-                DX=np.append(DX,rx)
-                DY=np.append(DY,ry)
-                BX=np.append(BX,Drone1.TF)
-                BY=np.append(BY,Drone1.TF)
-                BZ=np.append(BZ,Drone1.TF)
-                BS=np.append(BS,Drone1.TF)
-
-                #ic(testSignature.TFperm)
-                loop_DZ=np.append(loop_DZ,Drone1.TF)
-            '''
-            #reset the labels for the vector graphs
-            bx.set(ylabel="Bx(T)")
-            by.set(ylabel="By(T)")
-            bz.set(ylabel="Bz(T)")
-            bs.set(ylabel="Bs(T)",xlabel="posY(m)")
-
-            #plot the vector graphs interactively
-            bx.plot(DY,BX)
-            by.plot(DY,BY)
-            bz.plot(DY,BZ)
-            bs.plot(DY,BS)
-            plt.pause(pausetime)
-            bx.clear()
-            by.clear()
-            bz.clear()
-            bs.clear()
-            '''
+                loop_DZ=np.append(loop_DZ,Drone1.TF)#variable to store the field value for the scalar map
+       
             
             
            
-            
-
-            #reset the vector graphs data
-            BX=np.empty((0,0),dtype=float)
-            BY=np.empty((0,0),dtype=float)
-            BZ=np.empty((0,0),dtype=float)
-            BS=np.empty((0,0),dtype=float)
-            DY=np.empty((0,0),dtype=float)
             
             #append the map data for one line in x coords to the set of the map
             DZ[:,ix]=loop_DZ

@@ -9,9 +9,10 @@
 
 import numpy as np
 from icecream import ic
-import ppigrf
 import matplotlib.pyplot as plt
 from datetime import datetime
+import ppigrf
+
 
 import dipole
 import geometry as geo
@@ -28,7 +29,8 @@ class MagSignature:
         self.wirelist   = []
         self.set_SensorPosition(sensorpos) #set the sensors position in this frame
         self.set_TranslationMatrix() #initialise the transformation matrix
-        self.setBe() #initialise the eath's magnetic field
+        self.initdefaultBe()#initialise the default earth magnetic field for testing
+        
 
     #method to load a spread sheet (csv format) of dipoles. this includes position, 
     def loadFromCSV(self,filename):
@@ -37,9 +39,10 @@ class MagSignature:
     #add a dipole to the signature
     def newDipole(self,dipole):
         self.dipolelist.append(dipole)
-
+        
+    #add a wire to the signature
     def newWire(self,wire):
-        wire.setSensorPos(geo.Transformation(self.aTb,self.sensorpos))
+        wire.setSensorPos(geo.Transformation(self.aTb,self.sensorpos))#setting the sensor's position in the signature's coords
         self.wirelist.append(wire)
     
     #set the sensor vector to all dipoles
@@ -66,7 +69,7 @@ class MagSignature:
         self.TF=np.array([0]).reshape(1,1)
         self.resultantB=np.array([0,0,0]).reshape(3,1)
 
-        if(len(self.dipolelist)>0):
+        if(len(self.dipolelist)>0):# only calculate dipoles if there are some
             for i in self.dipolelist:
                 #ic(i.get_vB())
                 phresB=phresB+i.get_vB()
@@ -87,7 +90,7 @@ class MagSignature:
             self.TFperm=self.c1*self.Be[0]/self.sBe+self.c2*self.Be[1]/self.sBe+self.c3*self.Be[2]/self.sBe
             self.TFind=self.c4*self.Be[0]**2/self.sBe+self.c5*self.Be[0]*self.Be[1]/self.sBe+self.c6*self.Be[0]*self.Be[1]/self.sBe+self.c7*self.Be[1]**2/self.sBe+self.c8*self.Be[1]*self.Be[2]/self.sBe+self.c9*self.Be[2]**2/self.sBe
 
-        if(len(self.wirelist)>0):    
+        if(len(self.wirelist)>0):# only calculate wires if there are some
             self.updateWire(amp)
             self.TFwire=np.linalg.norm( self.Bw.reshape(1,3).dot(self.Be)/self.sBe).reshape(1,1)#.reshape(1,3).dot(self.Be)/self.sBe
             
@@ -102,14 +105,8 @@ class MagSignature:
         
         self.sensorpos=np.array(sensorpos).reshape(3,1)
         
-
-    #set the magnetic field of the earth for the equations
-    def setBe(self,lon=-75.552067,lat=45.406838,h= 0.0,date = datetime(2023, 10, 20)):
-
-        Be,Bn,Bu=ppigrf.igrf(lon,lat,h,date)
-        
-        self.Be=np.concatenate((Be,Bn,Bu),axis=0)*1e-9
-        
+    def setBe(self,Be):
+        self.Be=Be
         self.sBe= np.sqrt(self.Be.reshape(1,3).dot(self.Be))
 
     def updateWire(self,amp):
@@ -127,3 +124,12 @@ class MagSignature:
         
 
         
+    #set the magnetic field of the earth for the equations
+    def initdefaultBe(self,lon=-75.552067,lat=45.406838,h= 0.0,date = datetime(2023, 10, 20)):
+
+        Be,Bn,Bu=ppigrf.igrf(lon,lat,h,date)
+        
+        self.Be=np.concatenate((Be,Bn,Bu),axis=0)*1e-9
+        
+        self.sBe= np.sqrt(self.Be.reshape(1,3).dot(self.Be))
+

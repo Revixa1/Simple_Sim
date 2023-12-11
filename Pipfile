@@ -10,6 +10,8 @@ scipy = "*"
 matplotlib = "*"
 ppigrf = "*"
 plotly = "*"
+shapely = "*"
+figures = "*"
 
 [dev-packages]
 
