@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="909.60193mm"
+   height="430.42825mm"
+   viewBox="0 0 909.60193 430.42825"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="wire_Diagram.svg"
+   inkscape:export-filename="Wire_Diagram.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.31471783"
+     inkscape:cx="1717.4114"
+     inkscape:cy="1031.0823"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <sodipodi:guide
+       position="-296.77294,488.63451"
+       orientation="1,0"
+       id="guide35"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(292.68683,59.949373)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.12286;stroke-dasharray:none;stroke-opacity:1"
+       id="rect15"
+       width="905.47906"
+       height="426.30539"
+       x="-290.6254"
+       y="-57.887943" />
+    <g
+       id="g7"
+       transform="translate(-8.1231296,-40.633664)">
+      <g
+         id="g11">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none"
+           id="rect1"
+           width="79.753891"
+           height="72.870789"
+           x="42.961811"
+           y="42.673573" />
+        <text
+           xml:space="preserve"
+           style="font-size:10.3472px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.651793;stroke-dasharray:none"
+           x="82.600769"
+           y="81.752678"
+           id="text1"><tspan
+             sodipodi:role="line"
+             style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.651793;stroke-dasharray:none"
+             x="82.600769"
+             y="81.752678"
+             id="tspan77">Wire</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g7-5"
+       transform="matrix(4.79644,0,0,4.3424342,-43.949613,-188.26072)" />
+    <g
+       id="g64"
+       transform="matrix(0.7181134,0,0,0.7181134,-133.89083,233.75092)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:#00ff00;fill-opacity:0.0145492;fill-rule:evenodd;stroke:#000000;stroke-width:2.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="path37"
+         sodipodi:type="arc"
+         sodipodi:cx="12.42122"
+         sodipodi:cy="-256.01468"
+         sodipodi:rx="193.06279"
+         sodipodi:ry="68.552711"
+         sodipodi:start="0.042771438"
+         sodipodi:end="0.041191389"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 205.30744,-253.08347 A 193.06279,68.552711 0 0 1 4.2423572,-187.52351 193.06279,68.552711 0 0 1 -180.47146,-258.89177 193.06279,68.552711 0 0 1 20.447692,-324.50812 193.06279,68.552711 0 0 1 205.32025,-253.1917" />
+      <text
+         xml:space="preserve"
+         style="font-size:14.9973px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94471;stroke-dasharray:none"
+         x="12.74366"
+         y="-280.3028"
+         id="text14-92"><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743654"
+           y="-280.3028"
+           id="tspan23">In this class, a wire has a current going</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743654"
+           y="-261.55618"
+           id="tspan4">through it. A wire is a 3d spline in some reference</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743663"
+           y="-242.80954"
+           id="tspan9">frame. The field mesured at a distance is described</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743661"
+           y="-224.06293"
+           id="tspan11">by the biosavard law. </tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.74366"
+           y="-205.3163"
+           id="tspan8" /><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.74366"
+           y="-186.56967"
+           id="tspan76" /></text>
+    </g>
+    <g
+       id="g64-8"
+       transform="matrix(0.7181134,0,0,0.7181134,-116.53749,459.43942)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:#00ff00;fill-opacity:0.0145492;fill-rule:evenodd;stroke:#000000;stroke-width:2.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="path37-1"
+         sodipodi:type="arc"
+         sodipodi:cx="12.42122"
+         sodipodi:cy="-256.01468"
+         sodipodi:rx="193.06279"
+         sodipodi:ry="68.552711"
+         sodipodi:start="0.042771438"
+         sodipodi:end="0.041191389"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 205.30744,-253.08347 A 193.06279,68.552711 0 0 1 4.2423572,-187.52351 193.06279,68.552711 0 0 1 -180.47146,-258.89177 193.06279,68.552711 0 0 1 20.447692,-324.50812 193.06279,68.552711 0 0 1 205.32025,-253.1917" />
+      <text
+         xml:space="preserve"
+         style="font-size:14.9973px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94471;stroke-dasharray:none"
+         x="12.74366"
+         y="-280.3028"
+         id="text14-92-2"><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743658"
+           y="-280.3028"
+           id="tspan11-0">The geometry of the wire is set by xyz points in</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.74366"
+           y="-261.55618"
+           id="tspan17">some reference frame.</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743652"
+           y="-242.80954"
+           id="tspan76-8">The first point is from the source of the current.</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.743668"
+           y="-224.06293"
+           id="tspan18">There is a need of a minimum of 4 points to</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="14.828285"
+           y="-205.3163"
+           id="tspan19">make the spline. </tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:30.818px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.94129;stroke-dasharray:none"
+       x="-255.02484"
+       y="-22.215622"
+       id="text14-9"><tspan
+         sodipodi:role="line"
+         id="tspan14-2"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.94129"
+         x="-255.02484"
+         y="-22.215622">Base idea behind the wire class</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#00dc26;fill-opacity:1;stroke:#000000;stroke-width:1.59;stroke-dasharray:none;stroke-opacity:1"
+       x="-186.22121"
+       y="204.35179"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         style="stroke-width:1.59"
+         x="-186.22121"
+         y="204.35179" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.18999;stroke-dasharray:none;stroke-opacity:1"
+       x="-168.42047"
+       y="-14.385174"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="stroke-width:4.19"
+         x="-168.42047"
+         y="-14.385174" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20.0952px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:37.9752;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="298.36371"
+       y="215.33908"
+       id="text41-7-0"><tspan
+         sodipodi:role="line"
+         style="stroke-width:37.9751"
+         x="298.36371"
+         y="215.33908"
+         id="tspan44-6">sensor vector</tspan></text>
+    <rect
+       style="fill:#00fe25;fill-opacity:1;stroke-width:6.29999;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="rect45"
+       width="65.122581"
+       height="72.6371"
+       x="392.73511"
+       y="90.840004" />
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 112.212,175.68214 371.47476,130.46702"
+       id="path44"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-7);stop-color:#000000"
+       d="M 102.1155,121.74167 371.47476,130.46702"
+       id="path44-2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-2);stop-color:#000000"
+       d="M 119.04719,209.5424 371.47476,130.46702"
+       id="path44-0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-5);stop-color:#000000"
+       d="M 102.06601,263.56906 371.47476,130.46702"
+       id="path44-9"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.0952px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:37.9752;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="425.07535"
+       y="132.34312"
+       id="text41-7-0-9"><tspan
+         sodipodi:role="line"
+         style="stroke-width:37.9751"
+         x="425.07535"
+         y="132.34312"
+         id="tspan44-6-2">sensor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.5961px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:28.9622;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="-119.35693"
+       y="202.72063"
+       id="text45"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="-119.35693"
+         y="202.72063"
+         id="tspan51">This wire makes 3 coefficients for compensation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.5961px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:28.9622;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="353.40891"
+       y="295.59579"
+       id="text45-5"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="353.40891"
+         y="295.59579"
+         id="tspan51-6">The number of blue dots represent the resolution of the wire.</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="353.40891"
+         y="313.84091"
+         id="tspan20">It is set after the geometry is defined(does not affect base</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="353.40891"
+         y="332.08606"
+         id="tspan21"> geometry only gives better curves)</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="353.40891"
+         y="350.33118"
+         id="tspan10">It's means were the field is calculated.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.5961px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:28.9622;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="-145.28154"
+       y="132.88623"
+       id="text45-7"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="-145.28154"
+         y="132.88623"
+         id="tspan51-8" /></text>
+    <path
+       style="fill:#000000;stroke-width:6.29999;paint-order:fill markers stroke"
+       id="path1"
+       d="M 153.04633,67.782968 C 145.48983,72.888969 138.19398,78.33189 131.2344,84.224023 124.09073,90.164937 118.09863,97.234694 112.60615,104.68446 108.62771,110.06786 105.1754,115.79553 102.1155,121.74167 99.395741,126.79119 98.182758,131.467 97.598373,137.12688 97.275158,142.71554 98.859695,148.05167 100.74432,153.23785 102.37699,157.49699 104.42399,161.57303 106.65196,165.54684 108.66182,168.84361 110.60301,172.16991 112.212,175.68214 113.87856,179.68602 115.05053,183.86811 115.89193,188.11567 116.5681,193.53576 117.08745,199.08608 116.28473,204.52707 116.12616,205.60191 115.85872,206.65783 115.64571,207.72321 114.17777,213.50049 111.17536,218.62364 107.6999,223.39892 104.67955,227.02115 101.80612,230.69637 99.527292,234.8339 97.334848,239.0105 96.696171,243.67209 96.362081,248.31161 96.150123,253.52023 97.757679,257.03963 100.4631,261.34874 103.34679,265.79496 107.38666,269.12519 111.68611,272.11657 117.47774,275.77822 123.64933,278.77349 129.70299,281.96621 135.71033,285.21024 135.40416,285.08854 139.87516,287.75739 142.31565,289.22789 144.82737,290.57859 147.19849,292.16135 147.19849,292.16135 150.88363,293.60605 150.88363,293.60605 V 293.60605 C 148.51529,291.98411 145.97905,290.63743 143.51943,289.1623 137.96741,285.85117 132.3905,282.57494 126.68211,279.53916 124.08377,278.17045 121.48292,276.80909 118.8732,275.46228 118.05987,275.04252 117.27668,274.55973 116.43663,274.19638 116.05269,274.03033 117.85905,275.07718 117.49729,274.86715 116.75828,274.43813 116.03549,273.98183 115.30458,273.53918 111.00071,270.59051 106.9351,267.32274 104.02481,262.91651 101.3603,258.77059 99.630611,255.16532 99.827964,250.10766 100.12901,245.5196 100.74874,240.90915 102.91062,236.77784 105.17429,232.65235 108.05722,229.00251 111.04164,225.37533 114.54409,220.55113 117.5496,215.3662 119.04719,209.5424 119.26579,208.46528 119.5394,207.39787 119.70299,206.31102 120.52605,200.84354 119.99702,195.27394 119.39597,189.81708 118.57999,185.54473 117.41318,181.34525 115.77406,177.30978 114.18449,173.77944 112.26097,170.43279 110.22463,167.14169 107.97795,163.18633 105.92177,159.12397 104.269,154.8802 102.36508,149.75069 100.75313,144.46903 101.04195,138.92521 101.58752,133.36249 102.80662,128.62129 105.48552,123.66512 108.52035,117.72956 111.93585,112.00632 115.88328,106.62539 121.34925,99.19397 127.33384,92.162616 134.43552,86.222365 141.40141,80.326192 148.70764,74.87396 156.36148,69.896338 Z" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#0029ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="path9"
+       sodipodi:type="arc"
+       sodipodi:cx="105.48552"
+       sodipodi:cy="123.66512"
+       sodipodi:rx="9.3323898"
+       sodipodi:ry="9.3323898"
+       sodipodi:start="0.064656221"
+       sodipodi:end="0.041191389"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 114.79841,124.2681 A 9.3323898,9.3323898 0 0 1 104.93718,132.98139 9.3323898,9.3323898 0 0 1 96.166196,123.17145 9.3323898,9.3323898 0 0 1 105.92452,114.34306 9.3323898,9.3323898 0 0 1 114.80999,124.04943" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:#0029ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="path9-7"
+       sodipodi:type="arc"
+       sodipodi:cx="112.212"
+       sodipodi:cy="175.68214"
+       sodipodi:rx="9.3323898"
+       sodipodi:ry="9.3323898"
+       sodipodi:start="0.064656221"
+       sodipodi:end="0.041191389"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 121.52489,176.28512 A 9.3323898,9.3323898 0 0 1 111.66366,184.99841 9.3323898,9.3323898 0 0 1 102.89267,175.18847 9.3323898,9.3323898 0 0 1 112.651,166.36009 9.3323898,9.3323898 0 0 1 121.53647,176.06645" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:#0029ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="path9-5"
+       sodipodi:type="arc"
+       sodipodi:cx="119.04719"
+       sodipodi:cy="209.5424"
+       sodipodi:rx="9.3323898"
+       sodipodi:ry="9.3323898"
+       sodipodi:start="0.064656221"
+       sodipodi:end="0.041191389"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 128.36008,210.14538 A 9.3323898,9.3323898 0 0 1 118.49885,218.85867 9.3323898,9.3323898 0 0 1 109.72786,209.04873 9.3323898,9.3323898 0 0 1 119.48619,200.22035 9.3323898,9.3323898 0 0 1 128.37166,209.92671" />
+    <path
+       style="font-variation-settings:normal;vector-effect:none;fill:#0029ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="path9-6"
+       sodipodi:type="arc"
+       sodipodi:cx="104.02481"
+       sodipodi:cy="262.9165"
+       sodipodi:rx="9.3323898"
+       sodipodi:ry="9.3323898"
+       sodipodi:start="0.064656221"
+       sodipodi:end="0.041191389"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 113.3377,263.51948 A 9.3323898,9.3323898 0 0 1 103.47648,272.23277 9.3323898,9.3323898 0 0 1 94.705488,262.42283 9.3323898,9.3323898 0 0 1 104.46381,253.59445 9.3323898,9.3323898 0 0 1 113.34928,263.30081" />
+  </g>
+</svg>

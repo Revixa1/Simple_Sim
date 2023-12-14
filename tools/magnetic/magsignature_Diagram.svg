@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="909.60193mm"
+   height="430.42825mm"
+   viewBox="0 0 909.60193 430.42825"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="magsignature_Diagram.svg"
+   inkscape:export-filename="magsignature_Diagram.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.43258099"
+     inkscape:cx="1450.5954"
+     inkscape:cy="895.78601"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g64-4"
+     showguides="true">
+    <sodipodi:guide
+       position="-296.77294,488.63451"
+       orientation="1,0"
+       id="guide35"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="1704.7296"
+       y="1344.9071"
+       width="86.643819"
+       height="33.275922"
+       id="rect60" />
+    <linearGradient
+       id="linearGradient39"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#f80000;stop-opacity:1;"
+         offset="0"
+         id="stop40" />
+      <stop
+         style="stop-color:#371fff;stop-opacity:1;"
+         offset="1"
+         id="stop41" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient39"
+       id="linearGradient41"
+       x1="179.045"
+       y1="138.51984"
+       x2="180.04309"
+       y2="187.27031"
+       gradientUnits="userSpaceOnUse" />
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-6" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient39"
+       id="linearGradient41-1"
+       x1="179.045"
+       y1="138.51984"
+       x2="180.04309"
+       y2="187.27031"
+       gradientUnits="userSpaceOnUse" />
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-3-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-6-6" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient39"
+       id="linearGradient41-1-3"
+       x1="179.045"
+       y1="138.51984"
+       x2="180.04309"
+       y2="187.27031"
+       gradientUnits="userSpaceOnUse" />
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-3-0-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-6-6-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle-3-0-6-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 C 0,1.67 0,-1.66 -2,-4 Z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7-6-6-9-6" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(292.68683,59.949373)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.12286;stroke-dasharray:none;stroke-opacity:1"
+       id="rect15"
+       width="905.47906"
+       height="426.30539"
+       x="-290.6254"
+       y="-57.887943" />
+    <g
+       id="g7-5"
+       transform="matrix(4.79644,0,0,4.3424342,-43.949613,-188.26072)" />
+    <g
+       id="g64"
+       transform="matrix(0.7181134,0,0,0.7181134,-133.89083,233.75092)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:#00ff00;fill-opacity:0.0145492;fill-rule:evenodd;stroke:#000000;stroke-width:2.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="path37"
+         sodipodi:type="arc"
+         sodipodi:cx="12.42122"
+         sodipodi:cy="-256.01468"
+         sodipodi:rx="193.06279"
+         sodipodi:ry="68.552711"
+         sodipodi:start="0.042771438"
+         sodipodi:end="0.041191389"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 205.30744,-253.08347 A 193.06279,68.552711 0 0 1 4.2423572,-187.52351 193.06279,68.552711 0 0 1 -180.47146,-258.89177 193.06279,68.552711 0 0 1 20.447692,-324.50812 193.06279,68.552711 0 0 1 205.32025,-253.1917" />
+      <text
+         xml:space="preserve"
+         style="font-size:14.9973px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94471;stroke-dasharray:none"
+         x="12.646179"
+         y="-299.04944"
+         id="text14-92"><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.646179"
+           y="-299.04944"
+           id="tspan23">A magnetic signature</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.646177"
+           y="-280.30283"
+           id="tspan56">is a way a frame (multiple magnetic</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.64618"
+           y="-261.55618"
+           id="tspan57">components in one solid Frame) would</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.646176"
+           y="-242.80957"
+           id="tspan58"> response in different orrientations</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.646179"
+           y="-224.06294"
+           id="tspan59">to a sensor and the earth's</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.646178"
+           y="-205.31631"
+           id="tspan60"> magnetic field</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="12.646179"
+           y="-186.56969"
+           id="tspan76" /></text>
+    </g>
+    <g
+       id="g64-4"
+       transform="matrix(0.7181134,0,0,0.7181134,110.02903,446.86976)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:#00ff00;fill-opacity:0.0145492;fill-rule:evenodd;stroke:#000000;stroke-width:2.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="path37-9"
+         sodipodi:type="arc"
+         sodipodi:cx="-11.041285"
+         sodipodi:cy="-313.3313"
+         sodipodi:rx="193.06279"
+         sodipodi:ry="68.552711"
+         sodipodi:start="0.042771438"
+         sodipodi:end="0.041191389"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 181.84494,-310.40009 A 193.06279,68.552711 0 0 1 -19.220147,-244.84013 193.06279,68.552711 0 0 1 -203.93397,-316.20839 193.06279,68.552711 0 0 1 -3.0148119,-381.82474 193.06279,68.552711 0 0 1 181.85774,-310.50832" />
+      <path
+         style="font-variation-settings:normal;fill:#00ff00;fill-opacity:0.0145492;fill-rule:evenodd;stroke:#000000;stroke-width:2.15597;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         id="path37-9-0"
+         sodipodi:type="arc"
+         sodipodi:cx="-11.041285"
+         sodipodi:cy="-180.74274"
+         sodipodi:rx="178.66628"
+         sodipodi:ry="56.66708"
+         sodipodi:start="0.042771438"
+         sodipodi:end="0.041191389"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 167.46159,-178.31974 A 178.66628,56.66708 0 0 1 -18.610257,-124.12653 178.66628,56.66708 0 0 1 -189.55014,-183.121 178.66628,56.66708 0 0 1 -3.6133386,-237.36082 178.66628,56.66708 0 0 1 167.47344,-178.4092" />
+      <text
+         xml:space="preserve"
+         style="font-size:14.9973px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94471;stroke-dasharray:none"
+         x="-10.87632"
+         y="-337.61942"
+         id="text14-92-2"><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="-10.876317"
+           y="-337.61942"
+           id="tspan66">The tools needed to create</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="-10.876318"
+           y="-318.8728"
+           id="tspan76-6">a reference coordinate are there.</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="-10.876313"
+           y="-300.12616"
+           id="tspan68">This means you can make multiple object's move</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.94471"
+           x="-10.87632"
+           y="-281.37955"
+           id="tspan71">together.</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:14.8095px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:29.3857;stroke-dasharray:none;paint-order:fill markers stroke"
+         x="-9.2123289"
+         y="-194.02684"
+         id="text72"><tspan
+           sodipodi:role="line"
+           id="tspan72"
+           style="stroke-width:29.3858"
+           x="-9.2123251"
+           y="-194.02684">It's in this class that magnetic</tspan><tspan
+           sodipodi:role="line"
+           style="stroke-width:29.3858"
+           x="-9.2123203"
+           y="-175.51497"
+           id="tspan73">compensation coefficients are put together </tspan><tspan
+           sodipodi:role="line"
+           style="stroke-width:29.3858"
+           x="-9.2123299"
+           y="-157.0031"
+           id="tspan74">and where the TotalField is summed.</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:30.818px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.94129;stroke-dasharray:none"
+       x="-255.02484"
+       y="-22.215622"
+       id="text14-9"><tspan
+         sodipodi:role="line"
+         id="tspan14-2"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.94129"
+         x="-255.02484"
+         y="-22.215622">Base idea behind the magsignature class</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#00dc26;fill-opacity:1;stroke:#000000;stroke-width:1.59;stroke-dasharray:none;stroke-opacity:1"
+       x="-186.22121"
+       y="204.35179"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         style="stroke-width:1.59"
+         x="-186.22121"
+         y="204.35179" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.18999;stroke-dasharray:none;stroke-opacity:1"
+       x="-168.42047"
+       y="-14.385174"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="stroke-width:4.19"
+         x="-168.42047"
+         y="-14.385174" /></text>
+    <g
+       id="g44"
+       transform="matrix(0.61603385,0,0,0.61603385,87.228516,54.899279)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient41);stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+         d="M 166.90741,200.406 235.41345,131.89996"
+         id="path25" />
+      <text
+         xml:space="preserve"
+         style="font-size:20.0952px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:37.9752;stroke-dasharray:none;paint-order:fill markers stroke"
+         x="241.96268"
+         y="133.21744"
+         id="text41"><tspan
+           sodipodi:role="line"
+           id="tspan41"
+           style="stroke-width:37.9751"
+           x="241.96268"
+           y="133.21744">N</tspan></text>
+    </g>
+    <path
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.88101;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle);stop-color:#000000;stop-opacity:1"
+       d="M 211.15015,157.25514 347.2711,135.71818"
+       id="path44"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g44-1"
+       transform="matrix(0.53353026,0,0,0.53353026,440.67035,130.32392)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient41-1);stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-3);stop-color:#000000;stop-opacity:1"
+         d="M 166.90741,200.406 235.41345,131.89996"
+         id="path25-9" />
+      <text
+         xml:space="preserve"
+         style="font-size:20.0952px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:37.9752;stroke-dasharray:none;paint-order:fill markers stroke"
+         x="241.96268"
+         y="133.21744"
+         id="text41-4"><tspan
+           sodipodi:role="line"
+           id="tspan41-7"
+           style="stroke-width:37.9751"
+           x="241.96268"
+           y="133.21744">N</tspan></text>
+    </g>
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.36124;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-3);stop-color:#000000"
+       d="M 547.99553,218.97156 453.42868,146.14821"
+       id="path44-3"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g44-1-1"
+       transform="matrix(0.10916235,0.52224335,-0.52224335,0.10916235,407.4828,169.0568)">
+      <path
+         style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient41-1-3);stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-3-0);stop-color:#000000;stop-opacity:1"
+         d="M 166.90741,200.406 235.41345,131.89996"
+         id="path25-9-5" />
+      <text
+         xml:space="preserve"
+         style="font-size:20.0952px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:37.9752;stroke-dasharray:none;paint-order:fill markers stroke"
+         x="241.96268"
+         y="133.21744"
+         id="text41-4-5"><tspan
+           sodipodi:role="line"
+           id="tspan41-7-4"
+           style="stroke-width:37.9751"
+           x="241.96268"
+           y="133.21744">N</tspan></text>
+    </g>
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.36124;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-3-0);stop-color:#000000"
+       d="M 342.66966,292.24915 394.60368,184.78294"
+       id="path44-3-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.37162;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-3-0-6);stop-color:#000000"
+       d="M 444.43807,-2.4778309 416.12852,76.837238"
+       id="path44-3-7-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:normal;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.70395;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle-3-0-6-8);stop-color:#000000"
+       d="M -16.039753,131.24107 -86.712404,196.23826"
+       id="path44-3-7-7-8"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#00fe25;stroke-width:6.29999;stroke-dasharray:none;paint-order:fill markers stroke;fill-opacity:1"
+       id="rect45"
+       width="65.122581"
+       height="72.6371"
+       x="371.47476"
+       y="94.148468" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.0952px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:37.9752;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="403.815"
+       y="135.65158"
+       id="text41-7-0-9"><tspan
+         sodipodi:role="line"
+         style="stroke-width:37.9751"
+         x="403.815"
+         y="135.65158"
+         id="tspan44-6-2">sensor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.5961px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:28.9622;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="-145.28154"
+       y="132.88623"
+       id="text45-7"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke-width:28.9622"
+         x="-145.28154"
+         y="132.88623"
+         id="tspan51-8" /></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke-width:6.29999;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="path52"
+       d="M 389.42474,32.452918 C 392.92629,26.252966 398.34773,21.551072 403.70972,17.012189 411.77496,10.478196 420.57956,4.9183897 430.02399,0.62185542 433.81018,-0.89700899 437.80525,-2.4126693 441.96961,-1.8947263 444.41978,-1.5899898 445.17284,-1.0779099 447.43725,-0.11402755 447.23704,-0.21182284 446.66308,-0.54714517 446.83662,-0.40741342 449.88041,2.0431442 448.86709,0.69285636 451.61074,3.5163177 453.90515,5.8774778 455.63608,8.5807442 457.37296,11.354652 460.05647,15.824049 461.9847,20.694848 464.81165,25.076054 467.80313,28.95383 472.22749,32.186726 477.12361,33.119441 478.00549,33.28744 478.90804,33.31869 479.80024,33.418316 487.04546,33.475197 493.76815,30.598252 500.34532,27.892179 506.73958,25.073991 513.30927,22.745734 520.17894,21.444534 525.78151,20.564988 529.99945,21.89662 534.88146,24.497704 534.48832,24.318928 533.40913,23.643984 533.70203,23.961381 534.31115,24.621471 535.15573,25.017145 535.86695,25.565671 536.63208,26.155734 537.37585,26.772933 538.13031,27.376564 538.13031,27.376564 541.67826,28.801568 541.67826,28.801568 V 28.801568 C 538.57155,26.287103 535.5399,23.839342 531.8805,22.087977 526.83209,19.490208 522.77399,18.329082 517.04227,19.256086 510.17959,20.615452 503.62636,23.004777 497.2208,25.802616 490.66294,28.47508 483.94753,31.330937 476.7247,31.125403 475.84022,31.005092 474.94371,30.953117 474.07124,30.764464 473.29972,30.597639 472.56412,29.830739 471.80961,30.062614 471.27764,30.22609 473.64894,31.309963 473.15981,31.044567 471.21988,29.992013 469.67,28.358076 468.3478,26.626772 465.45355,22.269434 463.53575,17.373192 460.84909,12.888698 459.49876,10.702528 458.79378,9.4299588 457.21276,7.3958104 453.79101,2.9933476 449.438,-0.01142478 444.43807,-2.4778309 442.10354,-3.4123048 441.38544,-3.8938359 438.87594,-4.1490239 434.68452,-4.5752517 430.68714,-3.0246426 426.89979,-1.4480011 417.48637,2.9475164 408.69371,8.5542568 400.59635,15.067042 395.15154,19.609104 389.67789,24.314078 386.01839,30.489842 Z" />
+    <text
+       xml:space="preserve"
+       style="font-size:20.1699px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:40.0222;stroke-dasharray:none;paint-order:fill markers stroke"
+       x="489.24774"
+       y="3.9171348"
+       id="text52"><tspan
+         sodipodi:role="line"
+         id="tspan52"
+         style="stroke-width:40.0222"
+         x="489.24774"
+         y="3.9171348">Wire</tspan></text>
+    <rect
+       style="fill:#00dc26;fill-opacity:1;stroke:#000000;stroke-width:3.15773;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14"
+       width="188.07826"
+       height="105.98247"
+       x="-243.64473"
+       y="210.73024" />
+    <g
+       id="g6"
+       transform="translate(5.5675159,-29.824738)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none"
+         id="rect1-1"
+         width="79.753891"
+         height="72.870789"
+         x="-26.664621"
+         y="129.2722" />
+      <text
+         xml:space="preserve"
+         style="font-size:11.8676px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+         x="-12.041928"
+         y="161.32253"
+         id="text1-2"><tspan
+           sodipodi:role="line"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+           x="-12.041928"
+           y="161.32253"
+           id="tspan3">Magnetic</tspan><tspan
+           sodipodi:role="line"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+           x="-12.041928"
+           y="176.15703"
+           id="tspan37">Signature</tspan></text>
+    </g>
+    <g
+       id="g8"
+       transform="translate(-126.12375,16.385345)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none"
+         id="rect1-6"
+         width="79.753891"
+         height="72.870789"
+         x="-108.67472"
+         y="220.0688" />
+      <text
+         xml:space="preserve"
+         style="font-size:11.8676px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+         x="-85.192879"
+         y="260.69345"
+         id="text1-0"><tspan
+           sodipodi:role="line"
+           id="tspan1-6"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+           x="-85.192879"
+           y="260.69345">Dipole</tspan></text>
+    </g>
+    <g
+       id="g9"
+       transform="translate(-120.68476,15.819954)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none"
+         id="rect1-8"
+         width="79.753891"
+         height="72.870789"
+         x="-28.920843"
+         y="220.0688" />
+      <text
+         xml:space="preserve"
+         style="font-size:11.8676px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+         x="-5.4389944"
+         y="260.69348"
+         id="text1-7"><tspan
+           sodipodi:role="line"
+           id="tspan1-9"
+           style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.747564;stroke-dasharray:none"
+           x="-5.4389944"
+           y="260.69348">Wire</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14.9973px;white-space:pre;inline-size:0;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94471;stroke-dasharray:none"
+       x="-189.20871"
+       y="206.66275"
+       id="text14-3"
+       transform="translate(-43.852671,19.646339)"><tspan
+         id="tspan14-0"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.94471"
+         x="-189.20871"
+         y="206.66275">Objects added in lists</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-292.68683,-59.949373)"
+       id="text60"
+       style="text-align:center;white-space:pre;shape-inside:url(#rect60);display:inline;fill:#000000;fill-opacity:1;stroke-width:23.811;stroke-dasharray:none;paint-order:fill markers stroke" />
+  </g>
+</svg>
