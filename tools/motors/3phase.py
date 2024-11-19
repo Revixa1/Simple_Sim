@@ -61,7 +61,7 @@ for i in time:
     t.append(i)
 
     Data=Tclark.dot(M3ph(i))
-    ic(Data)
+    #ic(Data)
     signalA.append(phaseA(i))
     signalB.append(phaseB(i))
     signalC.append(phaseC(i))

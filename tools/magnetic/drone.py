@@ -47,7 +47,7 @@ class Drone:
         
     # load the mesured strenght of the mag sources and there positions from csv file(spread sheet)
     def loadDronefromcsv(self,filename):
-        self.csvdata=np.genfromtxt(filename,delimiter=',')
+        self.csvdata=np.genfromtxt(filename,delimiter=';')
         
         cmTOm=0.01  #unit conversion from cm to m
 
